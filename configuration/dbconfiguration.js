@@ -1,4 +1,3 @@
-const { connect } = require("../routes/index.routes");
 const { Sequelize } = require('sequelize');
 
 let dbConf = {
@@ -15,6 +14,8 @@ const sequelize = new Sequelize(
     {
     host: 'localhost',
     dialect: dbConf.dbDialect,
-});
+    logging: false
+    }
+    );
 
 module.exports.sequelize = sequelize;
